@@ -1,0 +1,58 @@
+// Import All Using Helpers Directory
+@use "helpers/usinghelpers" as *;
+@use "helpers/global";
+
+// Begining Of The Project
+.container {
+  padding: 30px;
+}
+.list-colors {
+  @include flex(null, null, center, center, 10px);
+  margin-bottom: 50px;
+  &--item {
+    width: 70px;
+    height: 70px;
+    opacity: 0.7;
+    border-radius: 3px;
+    cursor: pointer;
+    @include transition;
+    &:nth-child(1) {
+      background-color:#CB452A;
+    }
+    &:nth-child(2) {
+      background-color:#099389;
+    }
+    &:nth-child(3) {
+      background-color:#9452B0;
+    }
+    &:nth-child(4) {
+      background-color:#2B3C4F;
+    }
+    &.active {
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+.result {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  &-head {
+    margin-bottom: 20px;
+    color: color(red-color-02);
+  }
+  &-body {
+    padding: 30px;
+    font-weight: bold;
+    border-radius: 7px;
+    font-size: 18px;
+    color: color(wht-color-01);
+    background-color: color(red-color-02);
+  }
+}
